@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>UNIT CONVERTER</h1>
+        <form name="form1" id="form1" action="">
+            <div class="origunit">
+                Original Unit: <br>
+                <select name="unit" id="orig_unit" onchange="changeconv()">
+                    <option value="" selected="selected">Select Unit</option>
+                    <option value="kilometers">kilometers</option>
+                    <option value="miles">miles</option>
+                    <option value="pounds">pounds</option>
+                    <option value="kilograms">kilograms</option>
+                </select>
+            </div>
+            <div class="convunit">
+                Converted Unit: <br>
+                <select name="unit" id="conv_unit" onchange="changeorig()">
+                    <option value="" selected="selected">Select Unit</option>
+                    <option value="miles">miles</option>
+                    <option value="pounds">pounds</option>
+                    <option value="kilometers">kilometers</option>
+                    <option value="kilograms">kilograms</option>
+                </select>
+            </div>
+            <div class="origvalue">
+                Original Value: <br>
+                <input type="text" placeholder="Unit not selected" id="input" oninput="convert()">
+            </div>
+            <div class="convvalue">
+                Converted Value: <br>
+                <input type="text" placeholder="Unit not selected" id="result" readonly>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
